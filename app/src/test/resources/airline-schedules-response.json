@@ -1,0 +1,236 @@
+{
+  "ScheduleResource": {
+    "Schedule": [
+      {
+        "TotalJourney": {
+          "Duration": "PT1H10M"
+        },
+        "Flight": {
+          "Departure": {
+            "AirportCode": "ZRH",
+            "ScheduledTimeLocal": {
+              "DateTime": "2020-02-05T06:55"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "FRA",
+            "ScheduledTimeLocal": {
+              "DateTime": "2020-02-05T08:05"
+            },
+            "Terminal": {
+              "Name": "1"
+            }
+          },
+          "MarketingCarrier": {
+            "AirlineID": "LH",
+            "FlightNumber": "5771"
+          },
+          "OperatingCarrier": {
+            "AirlineID": "LX"
+          },
+          "Equipment": {
+            "AircraftCode": "319"
+          },
+          "Details": {
+            "Stops": {
+              "StopQuantity": 0
+            },
+            "DaysOfOperation": "3",
+            "DatePeriod": {
+              "Effective": "2020-02-05",
+              "Expiration": "2020-02-05"
+            }
+          }
+        }
+      },
+      {
+        "TotalJourney": {
+          "Duration": "PT1H5M"
+        },
+        "Flight": {
+          "Departure": {
+            "AirportCode": "ZRH",
+            "ScheduledTimeLocal": {
+              "DateTime": "2020-02-05T08:05"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "FRA",
+            "ScheduledTimeLocal": {
+              "DateTime": "2020-02-05T09:10"
+            },
+            "Terminal": {
+              "Name": "1"
+            }
+          },
+          "MarketingCarrier": {
+            "AirlineID": "LH",
+            "FlightNumber": "1183"
+          },
+          "Equipment": {
+            "AircraftCode": "319"
+          },
+          "Details": {
+            "Stops": {
+              "StopQuantity": 0
+            },
+            "DaysOfOperation": "23467",
+            "DatePeriod": {
+              "Effective": "2020-02-05",
+              "Expiration": "2020-02-12"
+            }
+          }
+        }
+      },
+      {
+        "TotalJourney": {
+          "Duration": "PT1H5M"
+        },
+        "Flight": {
+          "Departure": {
+            "AirportCode": "ZRH",
+            "ScheduledTimeLocal": {
+              "DateTime": "2020-02-05T09:30"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "FRA",
+            "ScheduledTimeLocal": {
+              "DateTime": "2020-02-05T10:35"
+            },
+            "Terminal": {
+              "Name": "1"
+            }
+          },
+          "MarketingCarrier": {
+            "AirlineID": "LH",
+            "FlightNumber": "1185"
+          },
+          "Equipment": {
+            "AircraftCode": "32A"
+          },
+          "Details": {
+            "Stops": {
+              "StopQuantity": 0
+            },
+            "DaysOfOperation": "13",
+            "DatePeriod": {
+              "Effective": "2020-02-05",
+              "Expiration": "2020-02-10"
+            }
+          }
+        }
+      },
+      {
+        "TotalJourney": {
+          "Duration": "PT1H5M"
+        },
+        "Flight": {
+          "Departure": {
+            "AirportCode": "ZRH",
+            "ScheduledTimeLocal": {
+              "DateTime": "2020-02-05T11:15"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "FRA",
+            "ScheduledTimeLocal": {
+              "DateTime": "2020-02-05T12:20"
+            },
+            "Terminal": {
+              "Name": "1"
+            }
+          },
+          "MarketingCarrier": {
+            "AirlineID": "LH",
+            "FlightNumber": "1187"
+          },
+          "Equipment": {
+            "AircraftCode": "32A"
+          },
+          "Details": {
+            "Stops": {
+              "StopQuantity": 0
+            },
+            "DaysOfOperation": "3",
+            "DatePeriod": {
+              "Effective": "2020-02-05",
+              "Expiration": "2020-02-05"
+            }
+          }
+        }
+      },
+      {
+        "TotalJourney": {
+          "Duration": "PT1H5M"
+        },
+        "Flight": {
+          "Departure": {
+            "AirportCode": "ZRH",
+            "ScheduledTimeLocal": {
+              "DateTime": "2020-02-05T12:15"
+            }
+          },
+          "Arrival": {
+            "AirportCode": "FRA",
+            "ScheduledTimeLocal": {
+              "DateTime": "2020-02-05T13:20"
+            },
+            "Terminal": {
+              "Name": "1"
+            }
+          },
+          "MarketingCarrier": {
+            "AirlineID": "LX",
+            "FlightNumber": "1072"
+          },
+          "OperatingCarrier": {
+            "AirlineID": "2L"
+          },
+          "Equipment": {
+            "AircraftCode": "E90"
+          },
+          "Details": {
+            "Stops": {
+              "StopQuantity": 0
+            },
+            "DaysOfOperation": "123",
+            "DatePeriod": {
+              "Effective": "2020-02-05",
+              "Expiration": "2020-02-17"
+            }
+          }
+        }
+      }
+    ],
+    "Meta": {
+      "@Version": "1.0.0",
+      "Link": [
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/schedules/ZRH/FRA/2020-02-05?directFlights=0&limit=5",
+          "@Rel": "self"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/schedules/ZRH/FRA/2020-02-04?directFlights=0&limit=5&offset=0",
+          "@Rel": "previousRange"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/schedules/ZRH/FRA/2020-02-05?directFlights=0&limit=5&offset=5",
+          "@Rel": "next"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/operations/schedules/ZRH/FRA/2020-02-08T12:15?directFlights=0&limit=5&offset=0",
+          "@Rel": "nextRange"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/mds-references/airports/{airportCode}",
+          "@Rel": "related"
+        },
+        {
+          "@Href": "https://api.lufthansa.com/v1/mds-references/aircraft/{aircraftCode}",
+          "@Rel": "related"
+        }
+      ]
+    }
+  }
+}

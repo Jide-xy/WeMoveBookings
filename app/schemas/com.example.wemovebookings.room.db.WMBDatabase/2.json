@@ -1,0 +1,187 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "bad8a1177282e9076112d525c8aa146e",
+    "entities": [
+      {
+        "tableName": "Airport",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`AirportCode` TEXT NOT NULL, `CityCode` TEXT NOT NULL, `CountryCode` TEXT NOT NULL, `LocationType` TEXT NOT NULL, `UtcOffset` TEXT NOT NULL, `TimeZoneId` TEXT NOT NULL, `Latitude` REAL NOT NULL, `Longitude` REAL NOT NULL, `LanguageCode` TEXT NOT NULL, `Name` TEXT NOT NULL, PRIMARY KEY(`AirportCode`))",
+        "fields": [
+          {
+            "fieldPath": "AirportCode",
+            "columnName": "AirportCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "CityCode",
+            "columnName": "CityCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "CountryCode",
+            "columnName": "CountryCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "LocationType",
+            "columnName": "LocationType",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "UtcOffset",
+            "columnName": "UtcOffset",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "TimeZoneId",
+            "columnName": "TimeZoneId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Position.Coordinate.Latitude",
+            "columnName": "Latitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Position.Coordinate.Longitude",
+            "columnName": "Longitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Name.LanguageCode",
+            "columnName": "LanguageCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "Name.Name",
+            "columnName": "Name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "AirportCode"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "AirlineSchedule",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`Duration` TEXT NOT NULL, `Departure_AirportCode` TEXT NOT NULL, `Departure_DateTime` TEXT NOT NULL, `Arrival_AirportCode` TEXT NOT NULL, `Arrival_DateTime` TEXT NOT NULL, `Arrival_Name` TEXT, `MarketingCarrier_AirlineID` TEXT NOT NULL, `MarketingCarrier_FlightNumber` TEXT NOT NULL, `OperatingCarrier_AirlineID` TEXT NOT NULL, `AircraftCode` TEXT NOT NULL, `DaysOfOperation` TEXT NOT NULL, `StopQuantity` INTEGER NOT NULL, `Effective` TEXT NOT NULL, `Expiration` TEXT NOT NULL, PRIMARY KEY(`Departure_AirportCode`, `Arrival_AirportCode`))",
+        "fields": [
+          {
+            "fieldPath": "schedule.TotalJourney.Duration",
+            "columnName": "Duration",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schedule.Flight.Departure.AirportCode",
+            "columnName": "Departure_AirportCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schedule.Flight.Departure.ScheduledTimeLocal.DateTime",
+            "columnName": "Departure_DateTime",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schedule.Flight.Arrival.AirportCode",
+            "columnName": "Arrival_AirportCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schedule.Flight.Arrival.ScheduledTimeLocal.DateTime",
+            "columnName": "Arrival_DateTime",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schedule.Flight.Arrival.Terminal.Name",
+            "columnName": "Arrival_Name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "schedule.Flight.MarketingCarrier.AirlineID",
+            "columnName": "MarketingCarrier_AirlineID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schedule.Flight.MarketingCarrier.FlightNumber",
+            "columnName": "MarketingCarrier_FlightNumber",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schedule.Flight.OperatingCarrier.AirlineID",
+            "columnName": "OperatingCarrier_AirlineID",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schedule.Flight.Equipment.AircraftCode",
+            "columnName": "AircraftCode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schedule.Flight.Details.DaysOfOperation",
+            "columnName": "DaysOfOperation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schedule.Flight.Details.Stops.StopQuantity",
+            "columnName": "StopQuantity",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schedule.Flight.Details.DatePeriod.Effective",
+            "columnName": "Effective",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "schedule.Flight.Details.DatePeriod.Expiration",
+            "columnName": "Expiration",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "Departure_AirportCode",
+            "Arrival_AirportCode"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'bad8a1177282e9076112d525c8aa146e')"
+    ]
+  }
+}

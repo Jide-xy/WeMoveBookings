@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WeMoveBookings</string>
+    <string name="view_flights">VIEW FLIGHTS</string>
+    <string name="enter_select_origin_airport">Enter/Select Origin Airport</string>
+    <string name="enter_select_destination_airport">Enter/Select Destination Airport</string>
+    <string name="no_flights_available_for_selected_route">NO FLIGHTS AVAILABLE FOR SELECTED ROUTE</string>
+    <string name="from">From:</string>
+    <string name="to">To:</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
